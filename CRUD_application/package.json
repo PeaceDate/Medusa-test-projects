@@ -7,10 +7,11 @@
     "app1"
   ],
   "scripts": {
-    "start": "concurrently \"cd app1; yarn start\"",
-    "build": "concurrently \"cd app1; yarn build\"",
-    "serve": "concurrently \"cd app1; yarn serve\"",
-    "serve:app1": "cd app1; yarn serve"
+    "start": "concurrently \"cd app1; yarn start\" \"cd app2; yarn start\"",
+    "build": "concurrently \"cd app1; yarn build\" \"cd app2; yarn build\"",
+    "serve": "concurrently \"cd app1; yarn serve\" \"cd app2; yarn serve\"",
+    "serve:app1": "cd app1; yarn serve",
+    "serve:app2": "cd app2; yarn serve"
   },
   "dependencies": {
     "concurrently": "7.5.0"
